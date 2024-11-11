@@ -1,22 +1,7 @@
 import React, { useState } from 'react';
 import 'bulma/css/bulma.css';
 import './App.scss';
-/*
 
-enum Goods {
-  Dumplings = 'Dumplings',
-  Carrot = 'Carrot',
-  Eggs = 'Eggs',
-  IceCream = 'Ice cream',
-  Apple = 'Apple',
-  Bread = 'Bread',
-  Fish = 'Fish',
-  Honey = 'Honey',
-  Jam = 'Jam',
-  Garlic = 'Garlic',
-}
-
-*/
 export const goodsFromServer: string[] = [
   'Dumplings',
   'Carrot',
@@ -110,13 +95,11 @@ export const App: React.FC = () => {
       </div>
 
       <ul>
-        <ul>
-          {goods.map(good => (
-            <li data-cy="Good" key={good}>
-              {good}
-            </li>
-          ))}
-        </ul>
+        {goods.map(good => (
+          <li data-cy="Good" key={good}>
+            {good}
+          </li>
+        ))}
       </ul>
     </div>
   );
